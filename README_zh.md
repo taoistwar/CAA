@@ -54,6 +54,29 @@ CAA不仅仅是一个工具，它是连接AI智能与云端算力的关键桥梁
 
 在支持 MCP 的工具中添加 MCP 地址，并完成 MCP 服务配置。
 
+#### CodeBuddy
+
+点击 CodeBuddy 设置，进入MCP tab页，点击添加MCP，在打开的settings.json文件中添加如下内容：
+
+```json
+{
+  "mcpServers": {
+    "cloud_computer": {
+      "url": "https://mcp-server.haimacloud.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <您的云电脑API密钥>"
+      }
+    },
+    "cloud_phone": {
+      "url": "https://mcp-server.haimacloud.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <您的云手机API密钥>"
+      }
+    }
+  }
+}
+```
+
 #### Claude 桌面集成
 
 添加到您的 `claude_desktop_config.json`：
@@ -70,7 +93,7 @@ CAA不仅仅是一个工具，它是连接AI智能与云端算力的关键桥梁
     "cloud_phone": {
       "url": "https://mcp-server.haimacloud.com/mcp",
       "headers": {
-        "Authorization": "Bearer Bearer <您的云手机API密钥>"
+        "Authorization": "Bearer <您的云手机API密钥>"
       }
     }
   }
@@ -93,7 +116,7 @@ CAA不仅仅是一个工具，它是连接AI智能与云端算力的关键桥梁
     "cloud_phone": {
       "url": "https://mcp-server.haimacloud.com/mcp",
       "headers": {
-        "Authorization": "Bearer Bearer <您的云手机API密钥>"
+        "Authorization": "Bearer <您的云手机API密钥>"
       }
     }
   }

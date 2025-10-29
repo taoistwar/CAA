@@ -54,6 +54,30 @@ On the **API Key Management** page, locate your target API Key and click **View 
 
 Add the MCP address in any tool that supports MCP, and complete the MCP service configuration.
 
+
+#### CodeBuddy Integration
+
+Click the CodeBuddy settings, go to the MCP tab, click "Add MCP", and add the following content to the opened settings.json file:
+
+```json
+{
+  "mcpServers": {
+    "cloud_computer": {
+      "url": "https://mcp-server.haimacloud.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <您的云电脑API密钥>"
+      }
+    },
+    "cloud_phone": {
+      "url": "https://mcp-server.haimacloud.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <您的云手机API密钥>"
+      }
+    }
+  }
+}
+```
+
 #### Claude Desktop Integration
 
 add to your `claude_desktop_config.json`：
